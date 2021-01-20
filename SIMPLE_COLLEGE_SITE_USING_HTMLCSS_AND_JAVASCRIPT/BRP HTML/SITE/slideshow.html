@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+
+</head>
+<body>
+
+<div class="slideshow-container">
+
+<div class="amna slides">
+  <div class="numbertext">01 / 04</div>
+  <img src="./images/20181112130109_IMG_9524-01.jpeg">
+ </div>
+<div class="amna slides">
+  <div class="numbertext">02 / 04</div>
+  <img src="./images/image1(2).jpeg">
+  </div>
+
+<div class="amna slides">
+  <div class="numbertext">03 / 04</div>
+  <img src="./images/IMG_9518.jpg">
+</div>
+
+<div class="amna slides">
+  <div class="numbertext">04 / 04</div>
+  <img src="./images/auditorium.jpg">
+</div>
+
+
+</div>
+<br>
+
+<div style="text-align:center">
+  <span class="dot"></span> 
+  <span class="dot"></span> 
+  <span class="dot"></span> 
+</div>
+
+<script>
+var slideIndex = 0;
+showSlides();
+
+function showSlides() {
+    var i;
+    var slides = document.getElementsByClassName("iambrpslides");
+    var dots = document.getElementsByClassName("dot");
+    for (i = 0; i < slides.length; i++) {
+       slides[i].style.display = "none";  
+    }
+    slideIndex++;
+    if (slideIndex> slides.length) {slideIndex = 1}    
+    for (i = 0; i < dots.length; i++) {
+        dots[i].className = dots[i].className.replace(" active", "");
+    }
+    slides[slideIndex-1].style.display = "block";  
+    dots[slideIndex-1].className += " active";
+    setTimeout(showSlides, 2000); // Change image every 2 seconds
+}
+</script>
+
+</body>
+</html> 
